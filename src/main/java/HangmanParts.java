@@ -1,4 +1,5 @@
 public enum HangmanParts {
+    START(""),
 
     GALLOW ("""
               +---+
@@ -68,6 +69,10 @@ public enum HangmanParts {
 
     HangmanParts(String art) {
         this.art = art;
+    }
+
+    public String getArt() {
+        return art;
     }
 
     public HangmanParts getNextStage() {
