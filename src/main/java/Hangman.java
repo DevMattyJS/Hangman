@@ -31,6 +31,11 @@ public class Hangman {
 
             char guessedLetter = scanner.next().charAt(0);
 
+            if (!Character.isLetter(guessedLetter)) {
+                System.out.printf("Invalid input. Character '%c' is not a letter.\n", guessedLetter);
+                continue;
+            }
+
             // Checks if the letter was entered by a player in this game
             if (guessedLetters.contains(guessedLetter)) {
                 System.out.println("Invalid attempt. You already guessed this letter before.");
